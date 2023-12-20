@@ -23,8 +23,27 @@ spec:
     spec:
       containers:
         - name: demo-rsup
-          image: 10.12.10.49:8087/training/rsup-wahidin:v1
+          image: 10.12.10.49:8087/training/rsup-wahidin:v2
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /actuator/health/liveness
+              scheme: HTTP
+            failureThreshold: 3
+            periodSeconds: 3
+          startupProbe:
+            httpGet:
+              port: 8080
+              path: /actuator/health/readiness
+            initialDelaySeconds: 5
+          resources:
+            requests:
+              cpu: 200m
+              memory: 200Mi
+            limits:
+              cpu: 1000m
+              memory: 1Gi
       restartPolicy: Always

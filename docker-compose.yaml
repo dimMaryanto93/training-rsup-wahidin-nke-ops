@@ -6,7 +6,12 @@ networks:
   backend: { }
 services:
   aplikasi:
-    image: demo-aplikasi-rsup:v1
+    image: demo-aplikasi-rsup:v2
+    build:
+      dockerfile: Dockerfile
+      context: ./
+      args:
+        JAR_FILE: demo-applikasi-rsup-1.1-release.jar
     networks:
       - backend
       - frontend

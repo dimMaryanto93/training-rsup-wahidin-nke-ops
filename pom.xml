@@ -11,7 +11,7 @@
 
     <groupId>com.nutanix.training.rsup.wahidin</groupId>
     <artifactId>demo-applikasi-rsup</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.1-release</version>
     <name>demo-applikasi-rsup</name>
     <description>Demo project for Spring Boot</description>
     <properties>
