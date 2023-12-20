@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-rsup
+  labels:
+    app: demo-rsup
+    tier: backend
+    version: stable
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-rsup
+      tier: backend
+      version: stable
+  template:
+    metadata:
+      name: demo-rsup
+      labels:
+        app: demo-rsup
+        tier: backend
+        version: stable
+    spec:
+      containers:
+        - name: demo-rsup
+          image: dimmaryanto93/demo-aplikasi-rsws:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always
