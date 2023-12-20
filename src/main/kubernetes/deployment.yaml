@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: demo-rsup
-          image: dimmaryanto93/demo-aplikasi-rsws:v1
+          image: 10.12.10.49:8087/training/rsup-wahidin:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
