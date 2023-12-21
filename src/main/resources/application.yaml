@@ -21,3 +21,13 @@ management:
 spring:
   application:
     name: rsup-wahidin-demo
+  datasource:
+    url: jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/${DATABAS_NAME:rawat_inap}
+    password: ${DATABASE_PASSWORD:password}
+    username: ${DATABASE_USERNAME:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    generate-ddl: false

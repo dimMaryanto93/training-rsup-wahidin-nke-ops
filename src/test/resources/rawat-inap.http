@@ -1,0 +1,6 @@
+GET localhost:8080/api/rawat-inap/v1/list
+Content-Type: application/json
+
+###
+GET localhost:8080/api/rawat-inap/v1/01
+Content-Type: application/json

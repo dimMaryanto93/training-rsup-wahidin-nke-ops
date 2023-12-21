@@ -6,7 +6,7 @@ networks:
   backend: { }
 services:
   aplikasi:
-    image: demo-aplikasi-rsup:v2
+    image: demo-aplikasi-rsup:v3
     build:
       dockerfile: Dockerfile
       context: ./
@@ -33,6 +33,7 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: password
+      POSTGRES_DB: rawat_inap
     volumes:
       - pg_data:/var/lib/postgresql/data
     networks:
