@@ -15,7 +15,7 @@ import java.util.Optional;
 @RequestMapping("/api/rawat-inap/v1")
 public class RawatInapController {
 
-    private RawatInapRepository repo;
+    private final RawatInapRepository repo;
 
     public RawatInapController(RawatInapRepository repo) {
         this.repo = repo;
