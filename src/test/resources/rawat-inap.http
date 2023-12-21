@@ -1,6 +1,8 @@
-GET localhost:8080/api/rawat-inap/v1/list
+GET 10.12.11.12/api/rawat-inap/v1/list
+Host: rsup.wahidin.go.id
 Content-Type: application/json
 
 ###
-GET localhost:8080/api/rawat-inap/v1/01
+GET 10.12.11.12/api/rawat-inap/v1/01
+Host: rsup.wahidin.go.id
 Content-Type: application/json

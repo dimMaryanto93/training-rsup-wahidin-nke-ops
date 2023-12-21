@@ -7,7 +7,7 @@ metadata:
     tier: backend
     version: stable
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: demo-rsup
@@ -23,8 +23,12 @@ spec:
     spec:
       containers:
         - name: demo-rsup
-          image: 10.12.10.49:8087/training/rsup-wahidin:v2
+          image: dimmaryanto93/demo-aplikasi-rsup:v3
           imagePullPolicy: Always
+          envFrom:
+            - secretRef:
+                name: db-cred
+                optional: false
           ports:
             - containerPort: 8080
           livenessProbe:
